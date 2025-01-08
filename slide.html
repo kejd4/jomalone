@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Demo styles -->
+ 
+</head>
+
+<body>
+  <!-- Swiper -->
+   <nav id="main">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><a href="#"><img src="img/Homepage_1_DT_bath-shower-bestsellers.avif" alt="x"></a></div>
+      <div class="swiper-slide"><a href="#"><img src="img/Her_DT.avif" alt="x"></a></div>
+      <div class="swiper-slide"><a href="#"><img src="./img/24B08_WOJML_5_Home_MPP_Banner_Desktop.avif" alt="x"></a></div>
+      <div class="swiper-slide"><a href="#"><img src="./img/25A02_Christmas_Gift-Finder_DT.avif" alt=""></a></div>
+      <div class="swiper-slide"><a href="#"><img src="img/24B08_WOJML_2_Cologne_MPP_Banner_Desktop.avif" alt="x"></a></div>
+    </div>
+    <div class="ctrl_box">
+     <div class="arrow">
+      <p class="prev"><img src="./img/visual_prev.png" alt="x"></p>
+      <p class="swiper-pagination"></p>
+      <!-- 숫자 >> fraction -->
+      <p class="next"><img src="./img/visual_next.png" alt="x"></p>
+     </div>
+     <div class="swiper-pagination"></div>
+     <!-- 막대바 >> prograssbar -->
+    </div>
+ </div>
+ </nav>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    let swiper = new Swiper("#main .mySwiper", {
+      pagination: {
+        el: "#main .ctrl_box>.swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+      },
+      loop : "true",
+      autoplay:{
+        delay : 2500,
+      },
+    });
+
+    let swiperNum = new Swiper("#main .mySwiper", {
+      pagination: {
+        el: "#main .arrow>.swiper-pagination",
+        type: "fraction",
+      },
+      loop : "true",
+    });
+    swiper.controller.control = swiperNum //스와이퍼 연동
+
+  </script>
+</body>
+
+</html>
