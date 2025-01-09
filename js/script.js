@@ -16,7 +16,7 @@ $(".language>ul>li").click(function(){
 })
 
 //side_menu
-$(".full_wrap").hide()
+/* $(".full_wrap").hide()
 
 $(".side_menu").click(function(){
  $(".full_wrap").stop().slideDown()
@@ -26,7 +26,7 @@ $(".side_menu").click(function(){
 $(".full_close").click(function(){
  $(".full_wrap").stop().slideUp()
  $("body,html").css({height:"auto",overflow:"auto"})
-})
+}) */
 
 
 // main slide
