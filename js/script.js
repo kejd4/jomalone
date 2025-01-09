@@ -16,9 +16,9 @@ $(".language>ul>li").click(function(){
 })
 
 //side_menu
-/* $(".full_wrap").hide()
+ $(".full_wrap").hide()
 
-$(".side_menu").click(function(){
+/*$(".side_menu").click(function(){
  $(".full_wrap").stop().slideDown()
  $("body,html").css({height:"100vh",overflow:"hidden"})
 })
